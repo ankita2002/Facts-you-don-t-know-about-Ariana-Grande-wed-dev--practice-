@@ -1,8 +1,10 @@
 body {
-    background-image: url("assets/bg1.png");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+    margin: 0;
+    background: #fdf4ffa6;
+}
+
+.upper {
+    width: 100%;
 }
 
 .intro-ag {
@@ -10,11 +12,13 @@ body {
     align-items: center;
     margin: 50px auto;
     max-width: 20cm;
+    z-index: 10;
 }
 
 .name-cnt {
     padding: 20px;
     width: 60%;
+    transition: all 200ms;
 }
 
 .name {
@@ -32,6 +36,7 @@ body {
     padding: 20px;
     width: 40%;
     text-align: center;
+    transition: all 200ms;
 }
 
 .dp {
@@ -41,26 +46,49 @@ body {
     box-shadow: 0 0 10px #ccc;
 }
 
+.lower {
+    padding-top: 75px;
+    padding-bottom: 75px;
+    background-image: url("assets/bg1.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%;
+}
+
 .facts-cnt {
     margin: auto;
-    margin-bottom: 20px;
+    padding: 20px;
     background-image: url("assets/bg2.png");
     background-repeat: no-repeat;
     background-size: cover;
     max-width: 25cm;
+    z-index: 10;
     border-radius: 10px;
     box-shadow: 0 0 10px #ccc;
+    transition: all 200ms;
 }
 
 .facts-heading {
-    margin-left: 20px;
     font-family: 'Carattere', cursive;
     font-size: 40px;
 }
 
 .facts {
-    margin: 20px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@media only screen and (max-width: 1100px) {
+.lower {
+    padding: 0;
+    background-image: initial;
+}
+
+.facts-cnt {
+    max-width: 28cm;
+    border-radius: 0;
+    box-shadow: 0 0 0;
+}
 }
 
 @media only screen and (max-width: 1000px) {
@@ -76,12 +104,6 @@ body {
 
 .name-cnt, .bio {
     text-align: center;
-}
-
-.facts-cnt {
-    margin-left: 10px;
-    margin-right: 10px;
-    box-shadow: 0 0 5px #ccc;
 }
 }
 
